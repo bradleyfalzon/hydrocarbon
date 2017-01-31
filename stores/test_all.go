@@ -3,7 +3,7 @@ package stores
 import (
 	"testing"
 
-	"github.com/fortytw2/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon"
 )
 
 // TestAll is a helper function that tests all parts of a PrimitiveStore

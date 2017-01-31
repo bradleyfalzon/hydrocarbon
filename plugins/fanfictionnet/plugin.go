@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/Puerkitobio/goquery"
-	"github.com/fortytw2/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon"
 	"github.com/microcosm-cc/bluemonday"
 )
 

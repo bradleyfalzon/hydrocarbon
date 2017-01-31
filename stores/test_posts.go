@@ -3,7 +3,7 @@ package stores
 import (
 	"testing"
 
-	"github.com/fortytw2/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon"
 	"github.com/stretchr/testify/assert"
 )
 

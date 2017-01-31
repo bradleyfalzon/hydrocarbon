@@ -1,6 +1,6 @@
 package pg
 
-import "github.com/fortytw2/hydrocarbon"
+import "github.com/bradleyfalzon/hydrocarbon"
 
 // GetPost returns a post by ID
 func (s *Store) GetPost(postID string) (*hydrocarbon.Post, error) {

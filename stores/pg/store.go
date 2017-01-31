@@ -4,9 +4,9 @@ import (
 	"strings"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
-	"github.com/fortytw2/hydrocarbon"
-	"github.com/fortytw2/hydrocarbon/internal/log"
-	"github.com/fortytw2/hydrocarbon/internal/pgmigrate"
+	"github.com/bradleyfalzon/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon/internal/log"
+	"github.com/bradleyfalzon/hydrocarbon/internal/pgmigrate"
 	"github.com/jmoiron/sqlx"
 	"github.com/jmoiron/sqlx/reflectx"
 )

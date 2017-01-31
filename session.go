@@ -3,7 +3,7 @@ package hydrocarbon
 import (
 	"time"
 
-	"github.com/fortytw2/hydrocarbon/internal/token"
+	"github.com/bradleyfalzon/hydrocarbon/internal/token"
 	"github.com/lib/pq"
 )
 

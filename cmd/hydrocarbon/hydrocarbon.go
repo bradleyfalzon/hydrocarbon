@@ -4,11 +4,12 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/fortytw2/hydrocarbon"
-	"github.com/fortytw2/hydrocarbon/internal/log"
-	"github.com/fortytw2/hydrocarbon/plugins/xenforo"
-	"github.com/fortytw2/hydrocarbon/stores/pg"
-	"github.com/fortytw2/hydrocarbon/web"
+	"github.com/bradleyfalzon/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon/internal/log"
+	"github.com/bradleyfalzon/hydrocarbon/plugins/fanfictionnet"
+	"github.com/bradleyfalzon/hydrocarbon/plugins/xenforo"
+	"github.com/bradleyfalzon/hydrocarbon/stores/pg"
+	"github.com/bradleyfalzon/hydrocarbon/web"
 	geoip2 "github.com/oschwald/geoip2-golang"
 )
 
@@ -45,7 +46,7 @@ func main() {
 		return
 	}
 
-	// go launchScraper(l, s)
+	go launchScraper(l, s)
 
 	r := web.Routes(s, l, geoipDB)
 	err = http.ListenAndServe(getPort(), r)
@@ -65,8 +66,9 @@ func getPort() string {
 
 func launchScraper(l log.Logger, s *hydrocarbon.Store) {
 	plugins := map[string]hydrocarbon.Instantiator{
-		"xenforo": xenforo.NewPlugin,
+		"xenforo":       xenforo.NewPlugin,
+		"fanfictionnet": fanfictionnet.NewPlugin,
 	}
 
-	hydrocarbon.ScrapeLoop(l, s.Feeds, s.Posts, plugins)
+	hydrocarbon.ScrapeLoop(l, s, plugins)
 }

@@ -8,7 +8,7 @@ import (
 	"html"
 	"os"
 
-	"github.com/fortytw2/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon"
 )
 
 func init() {
@@ -77,7 +77,7 @@ func TMPLERRbase(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -175,7 +175,7 @@ func TMPLERRfeed(title string, loggedInUser *hydrocarbon.User, feed *hydrocarbon
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -254,22 +254,27 @@ func TMPLERRfeeds(title string, loggedInUser *hydrocarbon.User, feeds []hydrocar
 	<div class="content">
 `)
 	_w(`
-<div class="sidebar">
-
-<ul>
-	<li class="sidebar-content"><a href="/feeds/new">New Feed</a></li>
+<ul class="sidebar">
+	<li><a href="/feeds/new">New Feed</a></li>
 `)
-	for _, f := range feeds {
-		_w(`	<li class="sidebar-content">`)
-		_w(fmt.Sprintf(`%v`, f.Name))
-		_w(`<a href="/feeds?id=`)
-		_w(fmt.Sprintf(`%v`, f.ID))
-		_w(`">link</a></li>
+	for _, f := range loggedInUser.Folders {
+		_w(`	<li>Folder `)
+		_w(fmt.Sprintf(`%s`, _escape(f.Name)))
+		_w(`</li>
+	`)
+		for _, fd := range f.Feeds {
+			_w(`
+	    <li><a href="/feeds?id=`)
+			_w(fmt.Sprintf(`%s`, _escape(fd.ID)))
+			_w(`">`)
+			_w(fmt.Sprintf(`%s`, _escape(fd.Name)))
+			_w(`</a></li>
+	`)
+		}
+		_w(`
 `)
 	}
 	_w(`</ul>
-
-</div>
 
 <div class="posts">
 
@@ -279,7 +284,7 @@ func TMPLERRfeeds(title string, loggedInUser *hydrocarbon.User, feeds []hydrocar
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -366,7 +371,7 @@ func TMPLERRhome(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -459,7 +464,7 @@ func TMPLERRlogin(title string, loggedInUser *hydrocarbon.User) (string, error) 
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -552,7 +557,7 @@ func TMPLERRnew_feed(title string, loggedInUser *hydrocarbon.User) (string, erro
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -644,7 +649,7 @@ func TMPLERRpassword_reset(title string, loggedInUser *hydrocarbon.User) (string
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -726,7 +731,7 @@ func TMPLERRpost(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -812,7 +817,7 @@ func TMPLERRprivacy(title string, loggedInUser *hydrocarbon.User) (string, error
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -907,7 +912,7 @@ func TMPLERRregister(title string, loggedInUser *hydrocarbon.User) (string, erro
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -1037,7 +1042,7 @@ All Paid Up! `)
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>

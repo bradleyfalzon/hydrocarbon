@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fortytw2/hydrocarbon/internal/cleanhttp"
+	"github.com/bradleyfalzon/hydrocarbon/internal/cleanhttp"
 )
 
 // Plugin Errors
