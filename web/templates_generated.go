@@ -8,7 +8,7 @@ import (
 	"html"
 	"os"
 
-	"github.com/fortytw2/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon"
 )
 
 func init() {
@@ -77,7 +77,7 @@ func TMPLERRbase(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -175,7 +175,7 @@ func TMPLERRfeed(title string, loggedInUser *hydrocarbon.User, feed *hydrocarbon
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -284,7 +284,7 @@ func TMPLERRfeeds(title string, loggedInUser *hydrocarbon.User, feeds []hydrocar
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -371,7 +371,7 @@ func TMPLERRhome(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -464,7 +464,7 @@ func TMPLERRlogin(title string, loggedInUser *hydrocarbon.User) (string, error) 
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -557,7 +557,7 @@ func TMPLERRnew_feed(title string, loggedInUser *hydrocarbon.User) (string, erro
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -649,7 +649,7 @@ func TMPLERRpassword_reset(title string, loggedInUser *hydrocarbon.User) (string
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -731,7 +731,7 @@ func TMPLERRpost(title string, loggedInUser *hydrocarbon.User) (string, error) {
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -817,7 +817,7 @@ func TMPLERRprivacy(title string, loggedInUser *hydrocarbon.User) (string, error
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -912,7 +912,7 @@ func TMPLERRregister(title string, loggedInUser *hydrocarbon.User) (string, erro
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>
@@ -1042,7 +1042,7 @@ All Paid Up! `)
 	_w(`	</div>
 
 	<footer>
-		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/fortytw2/hydrocarbon">Email</a>]
+		(c) 2017 Hydrocarbon [<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">GitHub</a>][<a rel="nofollow" href="https://twitter.com/hydrocarbonio">Twitter</a>][<a rel="nofollow" href="https://github.com/bradleyfalzon/hydrocarbon">Email</a>]
 	</footer>
 </body>
 </html>

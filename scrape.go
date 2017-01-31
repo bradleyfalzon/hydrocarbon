@@ -3,7 +3,7 @@ package hydrocarbon
 import (
 	"time"
 
-	"github.com/fortytw2/hydrocarbon/internal/log"
+	"github.com/bradleyfalzon/hydrocarbon/internal/log"
 	multierror "github.com/hashicorp/go-multierror"
 )
 

@@ -3,8 +3,8 @@ package web
 import (
 	"net/http"
 
-	"github.com/fortytw2/hydrocarbon"
-	"github.com/fortytw2/hydrocarbon/internal/httputil"
+	"github.com/bradleyfalzon/hydrocarbon"
+	"github.com/bradleyfalzon/hydrocarbon/internal/httputil"
 )
 
 func renderNewFeed(w http.ResponseWriter, r *http.Request) {

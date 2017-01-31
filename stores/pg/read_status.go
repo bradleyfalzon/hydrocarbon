@@ -1,6 +1,6 @@
 package pg
 
-import "github.com/fortytw2/hydrocarbon"
+import "github.com/bradleyfalzon/hydrocarbon"
 
 // GetReadStatus returns read status by ID
 func (s *Store) GetReadStatus(id string) (*hydrocarbon.ReadStatus, error) {

@@ -1,6 +1,6 @@
 package pg
 
-import "github.com/fortytw2/hydrocarbon"
+import "github.com/bradleyfalzon/hydrocarbon"
 
 // GetSession returns a session by ID
 func (s *Store) GetSession(id string) (*hydrocarbon.Session, error) {

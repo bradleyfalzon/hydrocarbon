@@ -1,6 +1,6 @@
 package pg
 
-import "github.com/fortytw2/hydrocarbon"
+import "github.com/bradleyfalzon/hydrocarbon"
 
 // CreateFolder saves a folder
 func (s *Store) CreateFolder(folder *hydrocarbon.Folder) (*hydrocarbon.Folder, error) {

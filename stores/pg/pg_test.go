@@ -8,8 +8,8 @@ import (
 
 	dockertest "gopkg.in/ory-am/dockertest.v2"
 
-	"github.com/fortytw2/hydrocarbon/internal/log"
-	"github.com/fortytw2/hydrocarbon/stores"
+	"github.com/bradleyfalzon/hydrocarbon/internal/log"
+	"github.com/bradleyfalzon/hydrocarbon/stores"
 	"github.com/stretchr/testify/assert"
 )
 

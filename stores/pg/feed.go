@@ -1,6 +1,6 @@
 package pg
 
-import "github.com/fortytw2/hydrocarbon"
+import "github.com/bradleyfalzon/hydrocarbon"
 
 // GetFeed returns a feed by its ID
 func (s *Store) GetFeed(id string) (*hydrocarbon.Feed, error) {
